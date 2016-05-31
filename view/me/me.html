@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SUI Mobile Demo</title>
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="author" content="阿里巴巴国际UED前端">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="../../dist/css/sm.css" tppabs="http://m.sui.taobao.org/dist/css/sm.css">
+    <link rel="stylesheet" href="../../dist/css/sm-extend.css" tppabs="http://m.sui.taobao.org/dist/css/sm-extend.css">
+	<!--
+    	作者：1079277561@qq.com
+    	时间：2016-05-17
+    	描述：aui引入
+    -->
+    <link rel="stylesheet" type="text/css" href="../../aui/css/aui.css" />
+    
+    <script src="../../assets/js/zepto.js" tppabs="http://m.sui.taobao.org/assets/js/zepto.js"></script>
+    <script src="../../assets/js/config.js" tppabs="http://m.sui.taobao.org/assets/js/config.js"></script>
+    <script>
+        function switchDiv(hideId,showId){
+        	$(hideId).hide();
+        	$(showId).show();
+        }
+    </script>
+</head>
+<body>
+<div id="mainDiv" class="page-group">
+    <div id="page-nav-bar" class="page">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left open-panel" data-panel=".panel-left">
+                添加好友
+            </a>
+
+            <a class="button button-link button-nav pull-right open-popup" data-popup=".popup-about">
+                设置
+            </a>
+
+            <h1 class="title">我</h1>
+
+        </header>
+
+
+        <nav class="bar bar-tab">
+
+            <a class="tab-item external" href="../home/home.html">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item external" href="../message/message.html">
+                <span class="icon icon-message"></span>
+                <span class="tab-label">消息</span>
+            </a>
+            <a class="tab-item external" href="javascript:;">
+                <img onclick="switchDiv('#mainDiv','#shareDiv')" src="../../assets/img/drawable/tabbar_compose_icon_add_meizu.png" width="35" height="35">
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon icon-search"></span>
+                <span class="tab-label">发现</span>
+            </a>
+            <a class="tab-item external active" href="#">
+                <span class="icon icon-me"></span>
+                <span class="tab-label">我</span>
+                <span class="badge">2</span>
+            </a>
+
+        </nav>
+
+        <div class="content">
+            <div class="card">
+                <!--<div class="card-header">新的公布:</div>-->
+                <div class="card-content">
+                    <div class="list-block media-list">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-media">
+                                    <a href="./personal/personal_center.html">
+                                        <img src="../../assets/img/demo/demo5.png" width="44" style="border-radius: 50%;">
+                                    </a>
+                                </div>
+                                <div class="item-inner">
+                                    <a href="./personal/personal_center.html">
+                                        <div class="item-title-row">
+                                            <div class="item-title">ikain</div>
+                                        </div>
+                                        <div class="item-subtitle">简介：暂无介绍</div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <span>0 微博</span>
+                    <span>11 关注</span>
+                    <span>5 粉丝</span>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="list-block">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">新的好友</div>
+                                    <div class="item-after"><span class="badge">5</span></div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">新手任务</div>
+                                    <div class="item-after"><span class="badge">5</span></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="list-block">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">我的相册</div>
+                                    <div class="item-after"><span class="badge">5</span></div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">我的赞</div>
+                                    <div class="item-after"><span class="badge">5</span></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="list-block">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">微博支付</div>
+                                    <div class="item-after"><span class="badge">5</span></div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">微博运动</div>
+                                    <div class="item-after"><span class="badge">5</span></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="list-block">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-f7"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">更多</div>
+                                    <div class="item-after"><span class="badge">5</span></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--
+	作者：1079277561@qq.com
+	时间：2016-05-17
+	描述：share页展开
+-->
+<div style="display: none;"  id="shareDiv">
+	<div style="height: 230px;">
+	</div>
+	<div class="aui-content">
+        <ul class="aui-grid-nine">
+            <li class="aui-col-xs-4 aui-text-center">
+                <img src="../../assets/img/message/tabbar_compose_idea.png" width="70" height="70">
+                <p>文字</p>
+            </li>
+            <li class="aui-col-xs-4 aui-text-center">
+                <img src="../../assets/img/message/tabbar_compose_photo.png" width="70" height="70">
+                <p>照片/视频</p>
+            </li>
+            <li class="aui-col-xs-4 aui-text-center">
+                <img src="../../assets/img/message/tabbar_compose_headlines.png" width="70" height="70">
+                <p>头条文章</p>
+            </li>
+            <li class="aui-col-xs-4 aui-text-center">
+                <img src="../../assets/img/message/tabbar_compose_lbs.png" width="70" height="70">
+                <p>签到</p>
+            </li>
+            <li class="aui-col-xs-4 aui-text-center">
+                <img src="../../assets/img/message/tabbar_compose_review.png" width="70" height="70">
+                <p>点评</p>
+            </li>
+            <li class="aui-col-xs-4 aui-text-center">
+                <img src="../../assets/img/message/tabbar_compose_more.png" width="70" height="70">
+                <p>更多</p>
+            </li>
+        </ul>
+	</div>
+	<nav style="background-color: #FFFFFF;" class="bar bar-tab">
+        <a class="tab-item external">
+        </a>
+        <a class="tab-item external">
+        </a>
+        <a class="tab-item external">
+        	<img onclick="switchDiv('#shareDiv','#mainDiv')" src="../../assets/img/navigationbar/navigationbar_close.png" width="30" height="30">
+        </a>
+        <a class="tab-item external">  
+        </a>
+        <a class="tab-item external">
+        </a>
+    </nav>
+</div>
+<script src="../../dist/js/sm.js" tppabs="http://m.sui.taobao.org/dist/js/sm.js"></script>
+<script src="../../dist/js/sm-extend.js" tppabs="http://m.sui.taobao.org/dist/js/sm-extend.js"></script>
+<script src="../../dist/js/sm-city-picker.js" tppabs="http://m.sui.taobao.org/dist/js/sm-city-picker.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+
+.topbar-pop {
+	position: absolute;
+	z-index: 9999;
+	padding: .3125rem;
+	width: 7.375rem;
+    top: 2.3rem;
+    left: 5.8rem;
+	background: #32A5E7;
+	border-radius: 3px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .5)
+}
+.topbar-leftPos {
+	width:4.0rem;top: 2.3rem;left:14.5rem;
+}
+.topbar-pop::after {
+	content: " ";
+	position: absolute;
+	top: -.3125rem;
+	left: 4.6875rem;
+	/*width: .625rem;*/
+	height: .625rem;
+	background: linear-gradient(-45deg, transparent 50%, rgba(90, 90, 90, .96) 51%, rgba(90, 90, 90, .96));
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.topbar-pop .isLeftArrow::after {
+	left: 2.0625rem
+}
+
+.topbar-pop .list {
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	text-align: left
+}
+
+.topbar-pop .list .item {
+	position: relative;
+	display: block;
+	padding: 0 10px;
+	font-size: 14px;
+	line-height: 2.25rem;
+	color: #fff;
+	-webkit-border-radius: 2px;
+	border-radius: 2px
+}
+
+.topbar-pop .list .item.active {
+	background: #4c4c4c!important
+}
+
+.topbar-pop .list .item.isActive {
+	color: #FFFFFF;
+	background: #B5B5B5
+}
+
+.topbar-pop .list .item.isNew::before {
+	content: ' ';
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	width: .5rem;
+	height: .5rem;
+	background: #ff5b36;
+	-webkit-border-radius: .25rem;
+	border-radius: .25rem
+}
+
+.topbar-pop .list .item .iconf {
+	margin: 0 0 0 6px;
+	color: #929292
+}
+
+.topbar-pop .list .item .num {
+	float: right;
+	font-size: .75rem;
+	color: rgba(255, 255, 255, .5)
+}
+
+.topbar-pop .list .item-split {
+	position: relative;
+	margin: 4px 0;
+	font-size: .75rem
+}
+
+.topbar-pop .list .item-split span {
+	position: relative;
+	z-index: 1;
+	margin: 0 0 0 8px;
+	padding: 0 2px;
+	background: #606060
+}
+
+.topbar-pop .list .item-split::after {
+	content: ' ';
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #4d4d4d
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-device-pixel-ratio:2) {
+	.topbar-pop .list .item-split::after {
+		border: none;
+		height: 1px;
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(50%, #4d4d4d), color-stop(50%, transparent));
+		background-image: -webkit-linear-gradient(top, #4d4d4d 0, #4d4d4d 50%, transparent 50%);
+		background-image: linear-gradient(to bottom, #4d4d4d 0, #4d4d4d 50%, transparent 50%);
+		-webkit-background-size: 100% 1px;
+		background-size: 100% 1px;
+		background-repeat: no-repeat;
+		background-position: top
+	}
+}
+
+.topbar-pop .action {
+	margin: 0 0 -5px;
+	padding: 5px 0;
+	background: #5a5a5a;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px
+}
+
+.topbar-pop .action .btn {
+	display: block;
+	border: #454545 solid 1px;
+	line-height: 1.625rem;
+	font-size: .875rem;
+	color: #fff;
+	text-align: center
+}
+
+.topbar-pop .action .btn.isHover {
+	background: #535353
+}

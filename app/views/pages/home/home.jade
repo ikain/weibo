@@ -1,0 +1,111 @@
+extends ../../layout
+
+block header
+    header.bar.bar-nav
+        a.icon.icon-me.pull-left.open-panel
+        a.button.button-link.button-nav.pull-left.open-popup
+            span.icon.icon-menu
+        h1.title
+            a(href='#')
+                i.icon.icon-down ikain
+
+block bar
+    nav.bar.bar-tab
+        a.tab-item.external.active(href='#')
+            span.icon.icon-home
+                span.tab-label 首页
+        a.tab-item.external(href='#')
+            span.icon.icon-message
+            span.tab-label 消息
+        a.tab-item.external(href='#')
+            img(src='/assets/img/drawable/tabbar_compose_icon_add_meizu.png',width='35',height='35')
+        a.tab-item.external(href='#')
+            span.icon.icon-search
+            span.tab-label 发现
+        a.tab-item.external(href='#')
+            span.icon.icon-me
+            span.tab-label 我
+            span.badge 2
+    .bar.bar-header-secondary
+        .searchbar
+            a.searchbar-cancel 取消
+            .search-input
+                lable.icon.icon-search(for='search')
+                input#search(type='search',placeholder='请输入关键字')
+
+block content
+    .content
+        section.mod-pagelist.card-combine(style="padding-top: 3px;background-color: #f4f4f4;")
+            .card-list
+                .card.card9.line-around
+                    header.layout-box.media-graphic
+                        a.mod-media.size-xs(href='#')
+                        div.media-main
+                            img(src='http://tva4.sinaimg.cn/crop.0.0.180.180.50/85f88975jw1e8qgp5bmzyj2050050aa8.jpg',width='100%')
+                            i.icon.icon-yellowv
+                        .box-col.item-list
+                            a.item-main.mct-a.txt-cut
+                            span 陈易迅
+                                i.icon.icon-vip
+                            .item-minor.txt-xxs.mct-d.txt-cut
+                                span.item 05-15 01:10
+                                span.from 来自iphone 6
+                        a.operate-box
+                            i.icon-font.icon-font-arrow-down.txt-s
+                    section.weibo-detail
+                        p.default-content 謝謝杭州。終於吃到牛肉湯米粉
+                        .media-pic-list
+                            ul
+                                li
+                                    img.wb_image(src='http://ww1.sinaimg.cn/thumb180/85f88975jw1f3vexfn3rhj21d60qon9i.jpg')
+                                li
+                                    img.wb_image(src='http://ww2.sinaimg.cn/thumb180/85f88975jw1f3vexk3xpnj216u0qoqbr.jpg')
+                                li
+                                    img.wb_image(src='http://ww3.sinaimg.cn/thumb180/85f88975jw1f3vexajpo2j21400qojzv.jpg')
+                                li
+                                    img.wb_image(src='http://ww2.sinaimg.cn/thumb180/85f88975jw1f3vexmazuhj20qo131jxd.jpg')
+                                li
+                                    img.wb_image(src='http://ww1.sinaimg.cn/thumb180/85f88975jw1f3vexo4fkzj20qo0qo0zl.jpg')
+                    footer.more-detail.line-top.layout-box.box-center-v
+                        a.box-bol.txt-s(href='javascript:void(0);')
+                            i.icon-font.icon-font-forward
+                            em.num.mct-d 52
+                        i.line-gradient
+                            a.box-col.txt-s(href='javascript:void(0);')
+                                i.icon-font.icon-font-comment
+                                em.num.mct-d 63
+                        i.line-gradient
+                            a.box-col.txt-s(href='javascript:void(0);')
+                                i.icon.icon-likesmall
+                                em.num.mct-d 208
+                .card.card9.line-around
+                    header.layout-box.media-graphic
+                        a.mod-media.size-xs(href='#')
+                        div.media-main
+                            img(src='http://tva4.sinaimg.cn/crop.0.0.180.180.50/85f88975jw1e8qgp5bmzyj2050050aa8.jpg',width='100%')
+                            i.icon.icon-yellowv
+                        .box-col.item-list
+                            a.item-main.mct-a.txt-cut
+                            span 陈易迅
+                                i.icon.icon-vip
+                            .item-minor.txt-xxs.mct-d.txt-cut
+                                span.item 05-15 01:10
+                                span.from 来自iphone 6
+                        a.operate-box
+                            i.icon-font.icon-font-arrow-down.txt-s
+                    section.weibo-detail
+                        p.default-content 謝謝杭州。終於吃到牛肉湯米粉
+                        div
+                            video(src='',poster='http://ww1.sinaimg.cn/orj480/736f0c7ejw1ezbyzotju1j20nq0dcq4p.jpg',controls='controls',preload='metadata',style='width:100%;max-width:30rem;max-height:30rem;"')
+                    footer.more-detail.line-top.layout-box.box-center-v
+                        a.box-bol.txt-s(href='javascript:void(0);')
+                            i.icon-font.icon-font-forward
+                            em.num.mct-d 52
+                        i.line-gradient
+                            a.box-col.txt-s(href='javascript:void(0);')
+                                i.icon-font.icon-font-comment
+                                em.num.mct-d 63
+                        i.line-gradient
+                            a.box-col.txt-s(href='javascript:void(0);')
+                                i.icon.icon-likesmall
+                                em.num.mct-d 208

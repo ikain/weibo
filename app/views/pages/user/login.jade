@@ -1,0 +1,41 @@
+extends ../../layout
+
+block header
+    header.bar.bar-nav
+        a.button.button-link.button-nav.pull-left.open-panel
+        h1.title 登录
+
+block bar
+    .bar.bar-standard.bar-footer
+        .text-center
+            p.buttons-row.margin-top-0
+                a.button(href='/user/toRegister') 注册账号
+                a.button(href='#') QQ登录
+
+
+block content
+    .content.native-scroll
+        .list-block
+            ul
+                li
+                    .item-content
+                        .item-media
+                            i.icon.icon-form-tel
+                        .item-inner
+                            .item-input
+                                input(type='text' placeholder='请输入手机号')
+                li
+                    .item-content
+                        .item-media
+                            i.icon.icon-form-password
+                        .item-inner
+                            .item-input
+                                input(type='text',placeholder='请输入密码')
+                            a.button.button-fill 忘记密码
+        .content-block
+            .row
+                .col-100
+                    a.button.button-big.button-fill(href='#') 登录
+            .row
+                .col-100.text-center.margin-top-10
+                    a(href='#') 返回首页
