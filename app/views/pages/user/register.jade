@@ -7,24 +7,41 @@ block header
 
 block content
    .content.native-scroll
-      .list-block
-         ul
-            li
-               .item-content
-                  .item-media
-                     i.icon.icon-form-tel
-                  .item-inner
-                     .item-input
-                        input(type='text',placeholder='请输入手机号码')
-                     a.button.button-fill(href='#') 获取验证码
-            li
-               .item-content
-                  .item-media
-                     i.icon.icon-form-password
-                  .item-inner
-                     .item-input
-                        input(type='text',placeholder='请输入验证码')
-      .content-block
-         .row
-            .col-100
-               a.button.button-big.button-fill(href='#') 注册
+      form#form(method='post',action='register')
+         .list-block
+            ul
+               li
+                  .item-content
+                     .item-media
+                        i.icon.icon-form-tel
+                     .item-inner
+                        .item-input
+                           input(type='text',placeholder='请输入手机号码',name='mobileNo')
+                        a#getCode.button.button-fill(href='#') 获取验证码
+               li
+                  .item-content
+                     .item-media
+                        i.icon.icon-form-password
+                     .item-inner
+                        .item-input
+                           input(type='text',placeholder='请输入验证码',name='checkCode')
+         .content-block
+            .row
+               .col-100
+                  a#submitBtn.button.button-big.button-fill(href='#') 注册
+   script(type='text/javascript').
+      $(function () {
+         $('#submitBtn').click(function () {
+            $('#form').submit();
+         });
+         $('#getCode').click(function () {
+            var url = 'sendRegisterCode';
+            var mobileNo = $('input[name=mobileNo]').val();
+            if (mobileNo) {
+               var data = {mobileNo: mobileNo};
+               $.get(url, data, function (d) {
+                  alert(d.message);
+               });
+            }
+         });
+      });

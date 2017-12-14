@@ -44,7 +44,7 @@ var UserSchema = new mongoose.Schema({
     //博客地址
     blog: String,
     //注册时间
-    create_date: {
+    createDate: {
         type: Date,
         default: Date.now()
     },
@@ -57,10 +57,11 @@ var UserSchema = new mongoose.Schema({
 UserSchema.pre('save', function (next) {
     var user = this;
     if (this.isNew) {
-        user.meta.createAt = Date.now()
+        user.createDate = Date.now()
     } else {
-        user.meta.updateAt = Date.now()
+        user.updateDate = Date.now()
     }
+    next();
 });
 
 UserSchema.methods = {

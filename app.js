@@ -2,11 +2,14 @@ var express = require('express');
 var path = require('path');
 var mongoose = require('mongoose');
 var mongoStore = require('connect-mongo')(express);
+var memcacheClient = require('./app/util/memcacheClient');
+
 var port = process.env.PORT || 3000;
 var app = express();
 var fs = require('fs');
 var dbUrl = 'mongodb://localhost:27017/weibo';
 
+memcacheClient.init('localhost:11211', { debug: true });
 mongoose.connect(dbUrl);
 
 // models loading
@@ -47,6 +50,7 @@ if ('development' === app.get('env')) {
   app.set('showStackError', true);
   app.use(express.logger(':method :url :status'));
   app.locals.pretty = true;
+  console.log('start development');
   //mongoose.set('debug', true)
 }
 

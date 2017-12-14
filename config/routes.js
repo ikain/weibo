@@ -3,6 +3,7 @@ var Movie = require('../app/controllers/movie')
 var Comment = require('../app/controllers/comment')
 var Category = require('../app/controllers/category')*/
 var User = require('../app/controllers/user');
+var Home = require('../app/controllers/home');
 
 module.exports = function(app) {
 
@@ -21,6 +22,10 @@ module.exports = function(app) {
   // User
   app.get('/user/toRegister',User.toRegister);
   app.get('/user/toLogin',User.toLogin);
+  app.post('/user/register',User.register);
+  app.get('/user/sendRegisterCode',User.sendRegisterCode);
+  app.post('/user/login',User.Login);
+  app.get('/home/index',Home.toIndex);
   /*app.post('/user/signup', User.signup)
   app.post('/user/signin', User.signin)
   app.get('/signin', User.showSignin)
